@@ -6,8 +6,8 @@ public class StackLinkedList<T> implements Stack<T> {
     }
 
     @Override
-    public void pop() {
-
+    public T pop() {
+        return null;
     }
 
     @Override
