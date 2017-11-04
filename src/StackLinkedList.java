@@ -25,5 +25,15 @@ public class StackLinkedList<T> implements Stack<T> {
         return false;
     }
 
+    @Override
+    public int getSize() {
+        return 0;
+    }
+
+    @Override
+    public void display() {
+
+    }
+
 
 }

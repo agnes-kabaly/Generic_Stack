@@ -57,5 +57,18 @@ public class StackArry<T> implements Stack<T> {
         }
     }
 
+    @Override
+    public int getSize() {
+        return maxSize;
+    }
+
+    @Override
+    public void display() {
+        System.out.println("Stack:");
+        for (int i = 0; i < maxSize; i++) {
+            System.out.println(array[i]);
+        }
+    }
+
 
 }

@@ -7,6 +7,7 @@ public class Main {
         stackArray.push(1);
         stackArray.push(2);
         stackArray.push(3);
+        stackArray.display();
         System.out.println(stackArray.isEmpty());
         System.out.println(stackArray.isFull());
         stackArray.push(12);
@@ -20,6 +21,7 @@ public class Main {
         stackArray.pop();
         stackArray.pop();
         System.out.println(stackArray.isEmpty());
+        System.out.println(stackArray.getSize());
 
     }
 
