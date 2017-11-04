@@ -26,6 +26,7 @@ public class Main {
         System.out.println(stackArray.peek());
         stackArray.push(12);
         stackArray.display();
+        System.out.println(stackArray.getSize());
 
         System.out.println("\n");
 
@@ -53,6 +54,7 @@ public class Main {
         stackLinkedList.display();
         stackLinkedList.push(33);
         stackLinkedList.display();
+        System.out.println(stackLinkedList.getSize());
 
     }
 

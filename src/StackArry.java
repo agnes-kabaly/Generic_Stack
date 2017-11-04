@@ -59,7 +59,12 @@ public class StackArry<T> implements Stack<T> {
 
     @Override
     public int getSize() {
-        return maxSize;
+        if (!isEmpty()) {
+            return top+1;
+        } else {
+            System.out.println("Stack is empty");
+            return 0;
+        }
     }
 
     @Override
