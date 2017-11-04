@@ -22,9 +22,14 @@ public class StackLinkedList<T> implements Stack<T> {
 
     @Override
     public T pop() {
+        Node<T> node;
         if (!isEmpty()) {
-
+            node = first;
+            first = first.next;
+            top--;
+            return node.getData();
         }
+        System.out.println("Stack is empty, pop() isn't possible");
         return null;
     }
 
@@ -33,7 +38,7 @@ public class StackLinkedList<T> implements Stack<T> {
         if (!isEmpty()) {
             return first.getData();
         }
-        System.out.println("Stack is empty, peek() isn't possible");
+        System.out.println("Stack is empty, peek() isn't possible:");
         return null;
     }
 
@@ -57,8 +62,12 @@ public class StackLinkedList<T> implements Stack<T> {
 
     @Override
     public void display() {
-        Node<T> node = first;
-        System.out.println(node.toString());
+        if (!isEmpty()) {
+            Node<T> node = first;
+            System.out.println(node.toString());
+        } else {
+            System.out.println("Stack is empty, nothing to display()!");
+        }
     }
 
 

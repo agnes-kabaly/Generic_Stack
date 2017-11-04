@@ -34,7 +34,7 @@ public class StackArry<T> implements Stack<T> {
         if (!isEmpty()) {
             return array[top];
         } else {
-            System.out.println("Stack is empty, peek() isn't possible");
+            System.out.println("Stack is empty, peek() isn't possible:");
             return null;
         }
     }
@@ -64,9 +64,13 @@ public class StackArry<T> implements Stack<T> {
 
     @Override
     public void display() {
-        System.out.println("Stack:");
-        for (int i = 0; i < maxSize; i++) {
-            System.out.println(array[i]);
+        if (!isEmpty()) {
+            System.out.println("Stack:");
+            for (int i = 0; i <= top; i++) {
+                System.out.println(array[i]);
+            }
+        } else {
+            System.out.println("Stack is empty, nothing to display()!");
         }
     }
 
