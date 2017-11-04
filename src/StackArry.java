@@ -14,6 +14,8 @@ public class StackArry<T> implements Stack<T> {
     public void push(T element) {
         if (!isFull()) {
             array[++top] = element;
+        } else {
+            System.out.println("Stack is full, push() isn't possible");
         }
     }
 
@@ -21,13 +23,20 @@ public class StackArry<T> implements Stack<T> {
     public T pop() {
         if (!isEmpty()) {
             return array[top--];
+        } else {
+            System.out.println("Stack is empty, pop() isn't possible");
+            return null;
         }
-        return null;
     }
 
     @Override
     public T peek() {
-        return array[top];
+        if (!isEmpty()) {
+            return array[top];
+        } else {
+            System.out.println("Stack is empty, peek() isn't possible");
+            return null;
+        }
     }
 
     @Override
